@@ -1,0 +1,110 @@
+What is JSX ?
+
+JSX is a syntax extension for JavaScript that allows developers to write HTML-like code inside their JavaScript code. It was originally developed by Facebook for use with the React library, which is a popular JavaScript library for building user interfaces.
+
+With JSX, developers can write code that combines both JavaScript logic and HTML-like syntax in a single file, making it easier to create complex UI components. For example, instead of writing HTML and JavaScript separately, developers can write code like this:
+
+const element = <h1>Hello, world!</h1>;
+
+
+What is a Package manager ?
+
+A package manager is a software tool that automates the process of installing, updating, configuring, and removing software packages. It helps developers to manage the dependencies of their projects and ensures that all required software libraries, modules, and tools are installed and up-to-date.
+
+Package managers provide a centralized repository of software packages, which makes it easy for developers to search for and download the packages they need for their projects. They also handle versioning and dependency resolution, which ensures that the required versions of each package are installed and that conflicts between different versions of packages are avoided.
+
+There are many different package managers available for different programming languages and platforms. For example, npm is a package manager for JavaScript, pip is a package manager for Python, and apt-get is a package manager for Debian-based Linux distributions.
+
+eg npm and yarn
+
+
+What is rendering ?
+
+Rendering is the process of creating a visual representation of data, often in the form of a user interface, from a set of instructions or source code. In web development, rendering is typically associated with displaying HTML, CSS, and JavaScript code in a web browser.
+
+When a web page or application is loaded, the browser sends a request to the server for the HTML, CSS, and JavaScript files that make up the page. Once the files are received, the browser parses the HTML and CSS to create a Document Object Model (DOM) and a Cascading Style Sheets (CSS) Object Model. These models define the structure, appearance, and behavior of the web page.
+
+The browser then executes the JavaScript code, which can modify the DOM and CSS Object Model and interact with the user. The final step in the rendering process is to display the resulting user interface on the screen.
+
+
+What is rendering ?
+
+Rendering is the process of creating a visual representation of data, often in the form of a user interface, from a set of instructions or source code. In web development, rendering is typically associated with displaying HTML, CSS, and JavaScript code in a web browser.
+
+When a web page or application is loaded, the browser sends a request to the server for the HTML, CSS, and JavaScript files that make up the page. Once the files are received, the browser parses the HTML and CSS to create a Document Object Model (DOM) and a Cascading Style Sheets (CSS) Object Model. These models define the structure, appearance, and behavior of the web page.
+
+The browser then executes the JavaScript code, which can modify the DOM and CSS Object Model and interact with the user. The final step in the rendering process is to display the resulting user interface on the screen.
+
+
+What are react components ?
+
+React components are the building blocks of a React application. They are reusable pieces of code that define the structure, appearance, and behavior of a user interface.
+
+A React component can be a simple button, a form input field, or a complex layout that contains multiple child components. Each component can be defined as a JavaScript function or class that returns a React element, which is a lightweight representation of a DOM element.
+
+React components can also have their own state and properties, which allows them to be flexible and dynamic. State represents the data that a component can use to render its user interface, while properties are values passed to a component by its parent component.
+
+Components can be nested within other components to create a hierarchical structure of UI elements. This allows developers to break down a complex UI into smaller, reusable pieces that are easier to manage and maintain.
+
+React provides two types of components: functional components and class components. Functional components are defined as JavaScript functions that take in properties and return a React element. Class components are defined as JavaScript classes that extend the React.Component class and provide additional features, such as lifecycle methods.
+
+
+
+Why do we use classname in jsx and not class
+
+In JSX, the class attribute is used to define a class in JavaScript, so using it for styling would cause a conflict. Therefore, React uses the className attribute instead of class to define CSS classes for HTML elements.
+
+This is because JSX is a syntax extension of JavaScript, and class is a reserved keyword in JavaScript used for defining object-oriented classes. So using class in JSX could lead to syntax errors.
+
+By using className instead, React avoids this conflict and allows developers to define CSS classes for HTML elements in their JSX code.
+
+
+eg - 
+
+import React from 'react';
+
+function Button(props) {
+  return (
+    <button className="btn btn-primary">{props.label}</button>
+  );
+}
+
+
+What is the basic structure of a jsx file ?
+
+basic structure of a jsx file
+
+The basic structure of a JSX file typically includes the following elements:
+
+An import statement for the React library, which is required to use JSX syntax:
+
+import React from 'react';
+
+The declaration of a functional or class component using JSX syntax:
+
+function MyComponent(props) {
+  return (
+    <div className="my-component">
+      <h1>{props.title}</h1>
+      <p>{props.description}</p>
+    </div>
+  );
+}
+or
+
+javascript
+Copy code
+class MyComponent extends React.Component {
+  render() {
+    return (
+      <div className="my-component">
+        <h1>{this.props.title}</h1>
+        <p>{this.props.description}</p>
+      </div>
+    );
+  }
+}
+
+The export of the component, so that it can be imported and used in other parts of the application:
+
+export default MyComponent;
